@@ -19,7 +19,6 @@
 * **添加记录 (Create)：** 录入新的收入或支出记录。
 * **删除记录 (Delete)：** 确认并移除不再需要的交易记录。
 * **数据模型：** 包含 `Date`, `Description`, `Amount`, `Category` 等核心字段。
-* **简洁 UI：** 采用简洁的 Apple 风格设计，专注于数据展示。
 
 ## 🚀 运行项目 (Getting Started)
 
@@ -57,10 +56,3 @@
 * 月度/年度数据统计和图表可视化。
 * 预算追踪功能。
 * 数据导入/导出 (CSV/Excel)。
-
-## 🤝 贡献 (Contribution)
-
-欢迎任何改进意见或代码贡献！如果您发现 Bug 或有功能建议，请随时在 [Issues](https://github.com/helenshz/Personal-Finance-Tracker/issues) 中提出。
-
----
-*Developed by helenshz*
