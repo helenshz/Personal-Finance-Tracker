@@ -1,42 +1,50 @@
 @model IEnumerable<FinanceTrackerApp.Models.Transaction> // 🌟 确保命名空间正确 🌟
 
 @{
-    ViewData["Title"] = "Simple Financial Tracker"; // 设置页面标题
+    ViewData["Title"] = "Transaction History"; // 设置页面标题
 }
 
-<h1>Simple Financial Tracker</h1>
+<div class="text-center custom-content-spacing">
 
-<p>
-    <a asp-action="Create">Add new transaction</a> 
-    @* asp-action="Create" 会链接到 TransactionsController 中的 Create 方法 *@
-</p>
+    <h1 class="display-5 fw-bold mb-5">
+        @ViewData["Title"] 
+    </h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.Date)</th>
-            <th>@Html.DisplayNameFor(model => model.Description)</th>
-            <th>@Html.DisplayNameFor(model => model.Amount)</th>
-            <th>@Html.DisplayNameFor(model => model.Type)</th>
-            <th>@Html.DisplayNameFor(model => model.Category)</th>
-            <th></th> @* 操作列 *@
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model) // 遍历控制器传递过来的数据模型
-        {
+    <table class="table">
+        <thead>
             <tr>
-                <td>@Html.DisplayFor(modelItem => item.Date)</td>
-                <td>@Html.DisplayFor(modelItem => item.Description)</td>
-                <td>@Html.DisplayFor(modelItem => item.Amount)</td>
-                <td>@Html.DisplayFor(modelItem => item.Type)</td>
-                <td>@Html.DisplayFor(modelItem => item.Category)</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
+                <th>@Html.DisplayNameFor(model => model.Date)</th>
+                <th>@Html.DisplayNameFor(model => model.Description)</th>
+                <th>@Html.DisplayNameFor(model => model.Amount)</th>
+                <th>@Html.DisplayNameFor(model => model.Type)</th>
+                <th>@Html.DisplayNameFor(model => model.Category)</th>
+                <th></th> @* 操作列 *@
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) // 遍历控制器传递过来的数据模型
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Date)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Type)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Category)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    
+    <p>
+        <a asp-action="Create" class="btn btn-dark rounded-pill shadow">
+                + Add New Transaction
+        </a>
+    </p>
+    
+</div>

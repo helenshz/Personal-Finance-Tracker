@@ -257,6 +257,7 @@ F:\学习\coding\Personal Finance WEB\FinanceTrackerApp\obj\Debug\net9.0\Finance
 F:\学习\coding\Personal Finance WEB\FinanceTrackerApp\obj\Debug\net9.0\FinanceTrackerApp.MvcApplicationPartsAssemblyInfo.cache
 F:\学习\coding\Personal Finance WEB\FinanceTrackerApp\obj\Debug\net9.0\FinanceTrackerApp.RazorAssemblyInfo.cache
 F:\学习\coding\Personal Finance WEB\FinanceTrackerApp\obj\Debug\net9.0\FinanceTrackerApp.RazorAssemblyInfo.cs
+F:\学习\coding\Personal Finance WEB\FinanceTrackerApp\obj\Debug\net9.0\FinanceTrackerApp.sourcelink.json
 F:\学习\coding\Personal Finance WEB\FinanceTrackerApp\obj\Debug\net9.0\rjimswa.dswa.cache.json
 F:\学习\coding\Personal Finance WEB\FinanceTrackerApp\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 F:\学习\coding\Personal Finance WEB\FinanceTrackerApp\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
