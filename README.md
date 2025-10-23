@@ -1,58 +1,61 @@
-# Personal Finance Tracker (个人财务追踪器)
+# Personal Finance Tracker
 
-这是一个基于 ASP.NET Core MVC 和 Entity Framework Core (EF Core) 构建的简单 Web 应用程序，旨在帮助用户在本地追踪和管理个人收支交易记录。本项目主要用于展示 C# 后端开发、SQL 数据库操作（通过 EF Core 实现）和基本的 Web 界面设计能力。
+This is a simple web application built with ASP.NET Core MVC and Entity Framework Core (EF Core), designed to help users locally track and manage personal income and expense transactions.
 
-## 🛠️ 技术栈 (Tech Stack)
+This project serves as a portfolio piece to showcase proficiency in C# backend development, SQL database operations (via EF Core), and basic Web UI design.
 
-| 领域 | 技术/框架 | 用途 |
+## 🛠️ Tech Stack
+
+| Area | Technology / Framework | Purpose |
 | :--- | :--- | :--- |
-| **后端** | C# / .NET 9 (或您使用的版本) | 核心业务逻辑 (Controller, Model) |
-| **框架** | ASP.NET Core MVC | Web 应用架构 (路由, View) |
-| **数据** | Entity Framework Core (EF Core) | 对象关系映射 (ORM)，用于数据库交互 |
-| **数据库** | SQLite (或 MSSQL LocalDB) | 数据持久化存储 |
-| **前端** | Razor Pages (`.cshtml`) | 动态 HTML 渲染 |
-| **样式** | Bootstrap 5 | 响应式布局和 UI 样式 |
+| **Backend** | C# / .NET 9 (or version used) | Core business logic (Controllers, Models) |
+| **Framework** | ASP.NET Core MVC | Web application architecture and routing |
+| **Data Access** | Entity Framework Core (EF Core) | Object-Relational Mapping (ORM) for database interaction |
+| **Database** | SQLite (or MSSQL LocalDB) | Local data persistence and storage |
+| **Frontend** | Razor Views (`.cshtml`) | Dynamic HTML rendering and templating |
+| **Styling** | Bootstrap 5 | Responsive layout and minimal, Apple-inspired UI |
 
-## ✨ 主要功能 (Features)
+## ✨ Core Features
 
-* **交易记录列表 (Index)：** 显示所有历史交易记录。
-* **添加记录 (Create)：** 录入新的收入或支出记录。
-* **删除记录 (Delete)：** 确认并移除不再需要的交易记录。
-* **数据模型：** 包含 `Date`, `Description`, `Amount`, `Category` 等核心字段。
+* **Transaction History (Index):** Displays a list of all recorded transactions.
+* **Record Creation (Create):** Enables input of new income or expense items.
+* **Record Deletion (Delete):** Provides a confirmation page to remove unwanted transactions.
+* **Data Model:** Includes core fields such as `Date`, `Description`, `Amount`, and `Category`.
+* **Minimalist UI:** Features a clean, Apple-inspired design focused on readability.
 
-## 🚀 运行项目 (Getting Started)
+## 🚀 Getting Started
 
-要运行此项目，您需要在本地安装 [.NET SDK](https://dotnet.microsoft.com/download)。
+To run this project locally, you must have the [.NET SDK](https://dotnet.microsoft.com/download) installed.
 
-1.  **克隆仓库：**
+1.  **Clone the Repository:**
     ```bash
     git clone [https://github.com/helenshz/Personal-Finance-Tracker.git](https://github.com/helenshz/Personal-Finance-Tracker.git)
     cd Personal-Finance-Tracker
     ```
 
-2.  **构建和迁移数据库：**
-    * 项目使用 EF Core Code-First 模式。首次运行时，请确保数据库已创建。
+2.  **Build and Run Migrations (Database Setup):**
+    * The project uses EF Core Code-First. Ensure you have the global tool installed.
     ```bash
-    # 确保您已安装 dotnet ef 工具
+    # Install EF Core tool globally if needed
     dotnet tool install --global dotnet-ef 
-    # 创建并更新数据库结构（SQLite 文件 finance.db 将被生成）
+    # Create and update the database schema (The SQLite file finance.db will be generated)
     dotnet ef database update 
     ```
 
-3.  **运行应用程序：**
+3.  **Run the Application:**
     ```bash
-    # 使用 watch 模式以便在开发时自动刷新
+    # Use watch mode for live updates during development
     dotnet watch 
     ```
 
-4.  **访问应用：**
-    * 在浏览器中打开：`http://localhost:5002` (或终端中显示的端口)
+4.  **Access the App:**
+    * Open your browser and navigate to: `http://localhost:5002` (or the port shown in the terminal)
 
-## 📌 持续更新计划 (Future Plans)
+## 📌 Future Plans
 
-本项目将持续改进，计划添加以下功能：
+This project is a work in progress. Planned future enhancements include:
 
-* 用户认证和多用户支持。
-* 月度/年度数据统计和图表可视化。
-* 预算追踪功能。
-* 数据导入/导出 (CSV/Excel)。
+* User authentication and multi-user support.
+* Monthly/Annual statistical reporting and chart visualization.
+* Budget tracking functionality.
+* Data import/export capabilities (CSV/Excel).
