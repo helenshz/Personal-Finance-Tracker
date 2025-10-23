@@ -1,0 +1,62 @@
+@model FinanceTrackerApp.Models.Transaction // 声明模型：期望接收单个 Transaction 对象
+
+@{
+    ViewData["Title"] = "Delete Transaction"; // 设置页面标题
+}
+
+<h1>Delete Transaction</h1>
+
+<h3 class="text-danger">Are you sure to delete this transaction?</h3>
+<hr />
+
+<div>
+    <h4>Transaction Details</h4>
+    
+    <dl class="row">
+        
+        @* 显示 Description *@
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        @* 显示 Amount *@
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        @* 显示 Date *@
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        @* 示例: 显示 Category (如果您的模型中包含) *@
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+        
+        @* 如果您在模型中保留了 Type 字段，也请在这里显示 *@
+
+    </dl>
+    
+    <form asp-action="Delete">
+        
+        @* 隐藏字段：将要删除的记录的 Id 传递给 POST 方法 *@
+        <input type="hidden" asp-for="Id" />
+        
+        <input type="submit" value="Delete" class="btn btn-danger" /> 
+        
+        <a asp-action="Index" class="btn btn-secondary">Return</a>
+    </form>
+</div>
